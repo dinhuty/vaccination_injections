@@ -7,7 +7,7 @@ if (isset($_GET["mod"]))
 
 switch ($mod) {
     case 'mucluc':
-        include "../SanPham/mucluc.php";
+        include "../vaccination/mucluc.php";
         break;
     case 'sanpham':
         include "../SanPham/sanpham.php";

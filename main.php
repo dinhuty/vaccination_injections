@@ -5,7 +5,7 @@
     </div>
 </div>
 <div class="items-start">
-    <form class="flex items-center max-w-sm mx-auto" method="GET" action="">
+    <form class="flex items-center max-w-sm mx-auto" method="GET" action="/vaccination_injections/search.php">
         <label for="simple-search" class="sr-only">Search</label>
         <div class="relative w-full">
             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
