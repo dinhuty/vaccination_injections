@@ -1,9 +1,7 @@
 <?php
 require("header.php");
 ?>
-<?php
-require("main.php")
-?>
+KQ dk
 <?php
 require("footer.php");
 ?>

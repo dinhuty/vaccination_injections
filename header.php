@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,12 +35,23 @@
                     </div>
 
                     <div class="relative ml-3">
-                        <button class='hover:opacity-70'>
+                        <?php
+                        if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['user_id'] && $_SESSION['role']) {
+                            if ($row['role'] == 'admin') {
+                                echo '<a href="/vaccination_injections/quanly" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Trang quản lý</a>';
+                            }
+                            echo '<a href="./logout.php" class="block px-4 py-2 text-sm text-white" role="menuitem" tabindex="-1" id="user-menu-item-0">Đăng xuất</a>';
+                        } else {
+                            echo '<button class="hover:opacity-70">
                             <a href="/vaccination_injections/login.php" class="block px-4 py-2 text-sm text-white" role="menuitem" tabindex="-1" id="user-menu-item-0">Đăng nhập</a>
-                        </button>
+                        </button>';
+                        }
+                        ?>
+
                     </div>
+
                 </div>
             </div>
         </nav>
 
-        <div class="relative w-full min-h-screen container mx-auto flex flex-col gap-6">
+        <div style="min-height: calc(100vh - 400px);" class="relative w-full  container mx-auto flex flex-col gap-6">
